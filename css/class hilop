@@ -1,0 +1,18 @@
+class hilop
+{ 
+    public static void main(String args[])
+    { Thread t= Thread.currentThread();                        
+        System.out.println("Nombre del hilo "+ t.getName());                        
+        t.setName("toto");                        
+        try{
+            for(int i=5;i>=1;i--)   
+            {                                        
+                System.out.println(i);                                      
+                Thread.sleep(1000);
+            }                         
+        }catch(InterruptedException e){
+            System.out.println("Interrupción del hilo principal");                        
+        }                        
+            System.out.println("Nombre del hilo "+ t.getName());            
+    }
+}
